@@ -36,13 +36,22 @@ const SalePrice=styled.p`
     color: green;
 `;
 
+const Title=styled.h1`
+    height: calc(3.6 * (2px + 1vw)); /* Make around 2 lines of space for title*/
+    overflow: hidden;
+    position: relative;
+    line-height: 1.2;
+    margin: 0 0 5% 0;
+    font-size: calc(2px + 1.5vw);
+`;
+
 export default function GameGiveaways(props : { data: Game[] } ){
     return (
         <AllCharsDiv>
             {
                 props.data.map((game: Game) =>
                     <SingleCharDiv key={game.gameID}>
-                        <h1>{game.title}</h1>
+                        <Title>{game.title}</Title>
                         <span>Original Price: </span>
                         <OriginalPrice> ${game.normalPrice} </OriginalPrice>
                         <span>Sale Price: </span>
