@@ -4,7 +4,7 @@ import type {Game} from "../interfaces/Game.ts";
 const AllCharsDiv=styled.div`
     display: flex;
     flex-flow: row wrap;
-    background-color: bisque;
+    background-color: #f3e5f5;
     justify-content: center;
 `;
 
@@ -12,11 +12,16 @@ const SingleCharDiv=styled.div`
     width: 40%;
     margin: 2%;
     padding: 1%;
-    background-color: darkorange;
+    background-color: #7b1fa2;
     color: white;
-    border: 3px darkred solid;
+    border: 3px #4a148c solid;
     font: italic small-caps bold calc(2px + 1vw) Papyrus, fantasy;
     text-align: center;
+
+    @media screen and (max-width: 750px) {
+        width: 90%;
+        margin: 5% auto;
+    }
 `;
 
 const ImageStyle=styled.img`
@@ -29,11 +34,13 @@ const ImageLink=styled.a`
 
 const OriginalPrice=styled.p`
     text-decoration: line-through;
-    color: red;
+    color: #f44336;
+    font-size: calc(2px + 1.5vw);
 `;
 
 const SalePrice=styled.p`
-    color: green;
+    color: #4caf50;
+    font-size: calc(2px + 1.5vw);
 `;
 
 const Title=styled.h1`

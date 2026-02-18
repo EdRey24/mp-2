@@ -6,7 +6,7 @@ import type {Game} from "./interfaces/Game.ts";
 const ParentDiv=styled.div`
     width: 80vw;
     margin: 0 auto;
-    border: 5px darkgoldenrod solid;
+    border: 5px #4a148c solid;
 `;
 
 export default function App(){
