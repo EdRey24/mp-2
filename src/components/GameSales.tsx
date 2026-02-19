@@ -18,7 +18,7 @@ const SingleCharDiv=styled.div`
     font: italic small-caps bold calc(2px + 1vw) Papyrus, fantasy;
     text-align: center;
 
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 1000px) {
         width: 90%;
         margin: 5% auto;
     }
@@ -52,16 +52,16 @@ const Title=styled.h1`
     font-size: calc(2px + 1.5vw);
 `;
 
-export default function GameGiveaways(props : { data: Game[] } ){
+export default function GameSales(props : { data: Game[] } ){
     return (
         <AllCharsDiv>
             {
                 props.data.map((game: Game) =>
                     <SingleCharDiv key={game.gameID}>
                         <Title>{game.title}</Title>
-                        <span>Original Price: </span>
+                        <h3>Original Price: </h3>
                         <OriginalPrice> ${game.normalPrice} </OriginalPrice>
-                        <span>Sale Price: </span>
+                        <h3>Sale Price: </h3>
                         <SalePrice> ${game.salePrice} </SalePrice>
                         <ImageLink href={"https://store.steampowered.com/app/" + game.steamAppID} target={"_blank"}>
                             <ImageStyle src={game.thumb} alt={`image of ${game.title}`}></ImageStyle>

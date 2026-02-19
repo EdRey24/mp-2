@@ -1,4 +1,4 @@
-import GameGiveaways from "./components/GameGiveaways.tsx";
+import GameSales from "./components/GameSales.tsx";
 import styled from "styled-components";
 import { useEffect, useState } from 'react'
 import type {Game} from "./interfaces/Game.ts";
@@ -28,7 +28,7 @@ export default function App(){
 
     return(
         <ParentDiv>
-            <GameGiveaways data={data}/>
+            <GameSales data={data}/>
         </ParentDiv>
     )
 }
